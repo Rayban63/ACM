@@ -91,5 +91,82 @@ namespace ACM.BLTest
 
 
         }
+        [TestMethod]
+        public void ValidateValid()
+        {
+            //--Arrange
+            var customer = new Customer();
+            customer.LastName = "Baggings";
+            customer.FirstName = "Bilbo";
+            customer.EmailAddress = "f.baggins@hobbiton.me";
+            var expected = true;
+
+            //--Act
+            var actual = customer.Validate();
+
+
+            //--Assert
+            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, actual);
+
+
+        }
+        [TestMethod]
+        public void ValidateMissingLastname()
+        {
+            //--Arrange
+            var customer = new Customer();
+            customer.EmailAddress = "f.baggins@hobbiton.me";
+            customer.FirstName = "Bilbo";
+            var expected = false;
+
+            //--Act
+            var actual = customer.Validate();
+
+
+            //--Assert
+            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, actual);
+
+
+        }
+        [TestMethod]
+        public void ValidateMissingFirstname()
+        {
+            //--Arrange
+            var customer = new Customer();
+            customer.EmailAddress = "f.baggins@hobbiton.me";
+            customer.LastName = "Baggins";
+            var expected = false;
+
+            //--Act
+            var actual = customer.Validate();
+
+
+            //--Assert
+            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, actual);
+
+
+        }
+        [TestMethod]
+        public void ValidateMissingEmail()
+        {
+            //--Arrange
+            var customer = new Customer();
+            customer.LastName = "Baggings";
+            customer.FirstName = "Bilbo";
+            var expected = false;
+
+            //--Act
+            var actual = customer.Validate();
+
+
+            //--Assert
+            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, actual);
+
+
+        }
     }
 }
