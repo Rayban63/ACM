@@ -8,6 +8,7 @@ namespace ACM.BL
 {
     public class Customer
     {
+        public static int InstanceCount { get; set; } //this property belongs to the class and not to the instance of this class
         private string _lastName;
 
         public string LastName
