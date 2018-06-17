@@ -26,7 +26,7 @@ namespace ACM.BL
                 product.CurrentPrice = 15.96M;
 
             }
-            return product
+            return product;
         }
 
         //Saves the current product.
