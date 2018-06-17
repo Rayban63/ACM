@@ -20,19 +20,7 @@ namespace ACM.BL
         public int OrderId { get; private set; }
 
 
-        //Retrieve one order.
-        public Order Retrieve(int orderId)
-        {
-            //code that retrieves the defined order
-            return new Order();
-        }
-
-        //Saves the current order
-        public bool Save()
-        {
-            //code that saves the defined order
-            return true;
-        }
+       
 
         //Validate the order data.
         public bool Validate()
