@@ -22,21 +22,7 @@ namespace ACM.BL
         public string ProductDesription { get; set; }
         public string ProductName { get; set; }
 
-        //Retrieve one product.
-
-        public Product Retrieve (int productId)
-        {
-            //code that retrieves the defined product.
-            return new Product();
-        }
-
-        //Saves the current product.
-        public bool Save()
-        {
-            //code that saves the defined product.
-            return true;
-
-        }
+        
 
         //Validates the product data.
         public bool Validate()
