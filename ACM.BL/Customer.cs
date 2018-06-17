@@ -9,14 +9,18 @@ namespace ACM.BL
     public class Customer
     {
         public Customer()
+            :this(0) //With this line calls the default constructors calls the paramatorised constructor
         {
-
+            
         }
         public Customer(int customerId)
         {
             this.CustomerId = customerId;
-
+            AddressList = new List<Address>();//this wil set an empty adress list in runtime.
+            //Without this line a Null value exeption will be thrown. by the Addresslist because by default the get will return null
         }
+        public List<Address> AddressList { get; set; }
+
         public static int InstanceCount { get; set; } //this property belongs to the class and not to the instance of this class
         private string _lastName;
 
