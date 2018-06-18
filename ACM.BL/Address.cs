@@ -26,6 +26,7 @@ namespace ACM.BL
         public string State { get; set; }
         public string PostalCode { get; set; }
         public string Country { get; set; }
+        //public string ShippingAddress { get; set; }
 
 
 
