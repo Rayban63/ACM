@@ -16,8 +16,13 @@ namespace ACM.BL
         {
             this.OrderId = orderId;
         }
+
+        public int CustomerId { get; set; }
+        public int ShippingAddressId { get; set; }
+
         public DateTimeOffset? OrderDate { get; set; }
         public int OrderId { get; private set; }
+        public List<OrderItem> OrderItems { get; set; }
 
 
        
