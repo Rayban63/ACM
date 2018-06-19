@@ -20,6 +20,7 @@ namespace ACM.BL
             //Without this line a Null value exeption will be thrown. by the Addresslist because by default the get will return null
         }
         public List<Address> AddressList { get; set; }
+        public int CustomerType { get; set; }
 
         public static int InstanceCount { get; set; } //this property belongs to the class and not to the instance of this class
         private string _lastName;
