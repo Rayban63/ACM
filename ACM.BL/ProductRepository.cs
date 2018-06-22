@@ -16,6 +16,11 @@ namespace ACM.BL
             //pass in the productId
             Product product = new Product(productId);
 
+            Object myObject = new Object();
+
+            Console.WriteLine("Object: " + myObject.ToString());
+            Console.WriteLine("Product: " + product.ToString());
+
             //code that retrieves the defined product.
 
             //Temporary hard coded values to return a polulated product
@@ -30,10 +35,22 @@ namespace ACM.BL
         }
 
         //Saves the current product.
-        public bool Save()
+        public bool Save(Product product)
         {
+            var Succes = true;
+            if(product.HasChanges && product.IsValid)
+            {
+                if (product.IsNew)
+                {
+                    //Call an insert Stored Procedure
+                }
+                else
+                {
+                    //Call an Update Stored Procedure
+                }
+            }
             //code that saves the defined product.
-            return true;
+            return Succes;
 
         }
     }

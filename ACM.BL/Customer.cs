@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    public class Customer
+    public class Customer : EntityBase
     {
         public Customer()
             :this(0) //With this line calls the default constructors calls the paramatorised constructor
@@ -69,7 +69,7 @@ namespace ACM.BL
             }
         }
        
-        public bool Validate()
+        public override bool Validate()
         {
             var IsValid = true;
             if (string.IsNullOrWhiteSpace(LastName)) IsValid = false;
@@ -77,6 +77,10 @@ namespace ACM.BL
             if (string.IsNullOrWhiteSpace(EmailAddress)) IsValid = false;
 
             return IsValid;
+        }
+        public override string ToString()
+        {
+            return FullName;
         }
 
     }

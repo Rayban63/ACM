@@ -35,10 +35,22 @@ namespace ACM.BL
             return new List<Customer>();
         }
         //saves the current customer
-        public bool Save()
+        public bool Save(Customer customer)
         {
+            var Succes = true;
+            if(customer.HasChanges && customer.IsValid)
+            {
+                if (customer.IsNew)
+                {
+                    // Call an insert procedure call
+                }
+                else
+                {
+                    // Call an update procedure call
+                }
+            }
             //code that saves the difined customer
-            return true;
+            return Succes;
         }
     }
 }

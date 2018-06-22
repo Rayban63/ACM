@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    public class Product
+    public class Product : EntityBase
     {
         public Product()
         {
@@ -25,12 +25,16 @@ namespace ACM.BL
         
 
         //Validates the product data.
-        public bool Validate()
+        public override bool Validate()
         {
             var IsValid = true;
             if (string.IsNullOrEmpty(ProductName)) IsValid = false;
             if (CurrentPrice == null) IsValid = false;
             return IsValid;
+        }
+        public override string ToString()
+        {
+            return ProductName;
         }
 
     }
