@@ -28,7 +28,20 @@ namespace ACM.BL
         public string Country { get; set; }
         //public string ShippingAddress { get; set; }
 
+        public override bool Validate()
+        {
+            var IsValid = true;
+            if (AddressType <1) IsValid = false;
+            if (AddressId <1) IsValid = false;
+            if (string.IsNullOrWhiteSpace(StreetLine1)) IsValid = false;
+            if (string.IsNullOrWhiteSpace(StreetLine2)) IsValid = false;
+            if (string.IsNullOrWhiteSpace(City)) IsValid = false;
+            if (string.IsNullOrWhiteSpace(State)) IsValid = false;
+            if (string.IsNullOrWhiteSpace(PostalCode)) IsValid = false;
+            if (string.IsNullOrWhiteSpace(Country)) IsValid = false;
+            return IsValid;
 
-
+        }
     }
+
 }

@@ -30,9 +30,9 @@ namespace ACM.BL
         //Validate the order data.
         public override bool Validate()
         {
-            var IsValide = true;
-            if (OrderDate == null) IsValide = false;
-            return IsValide;
+            var IsValid = true;
+            if (OrderDate == null) IsValid = false;
+            return IsValid;
 
         }
         public override string ToString()
