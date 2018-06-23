@@ -85,9 +85,9 @@ namespace ACM.BL
         }
         public string Log()
         {
-            var LogString = this.CustomerId + ": " +
-                            this.FullName + " " +
-                            "Email: " + this.EmailAddress + " " +
+            var LogString = "CustomerId: " + this.CustomerId + "; " +
+                            "Customer name: " + this.FullName + "; " +
+                            "Email: " + this.EmailAddress + "; " +
                             "Status: " + this.EntityState.ToString();
             return LogString;
         }

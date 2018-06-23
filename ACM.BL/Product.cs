@@ -50,9 +50,9 @@ namespace ACM.BL
         }
         public string Log()
         {
-            var LogString = this.ProductId + ": " +
-                            this.ProductName + " " +
-                            "Detail: " + this.ProductDesription + " " +
+            var LogString = "ProductId: " + this.ProductId + "; " +
+                            "Product name: " + this.ProductName + "; " +
+                            "Detail: " + this.ProductDesription + "; " +
                             "Status: " + this.EntityState.ToString();
             return LogString;
         }
