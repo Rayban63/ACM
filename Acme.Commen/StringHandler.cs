@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Acme.Commen
+namespace Acme.Common
 {
     public class StringHandler
     {
@@ -17,12 +17,14 @@ namespace Acme.Commen
                 {
                     if (char.IsUpper(letter))
                     {
+                        result = result.Trim();//Remove any allready existing spaces
                         result += " ";
 
                     }
                     result += letter;
 
                 }
+                result = result.Trim();
             }
             return result;
         }
