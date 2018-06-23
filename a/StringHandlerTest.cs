@@ -14,11 +14,9 @@ namespace a
             var source = "SonicScrewdriver";
             var expected = "Sonic Screwdriver";
 
-            var handler = new StringHandler();
-
             //--Act
+            var actual = StringHandler.InsertSpaces(source);
 
-            var actual = handler.InsertSpaces(source);
             //--Assert
             Assert.AreEqual(expected, actual);
         }
@@ -29,11 +27,9 @@ namespace a
             var source = "Sonic Screwdriver";
             var expected = "Sonic Screwdriver";
 
-            var handler = new StringHandler();
-
             //--Act
+            var actual = StringHandler.InsertSpaces(source);
 
-            var actual = handler.InsertSpaces(source);
             //--Assert
             Assert.AreEqual(expected, actual);
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Acme.Common;
 
 namespace ACM.BL
 {
@@ -20,9 +21,20 @@ namespace ACM.BL
         public Decimal? CurrentPrice { get; set; }
         public int ProductId { get; private set; }
         public string ProductDesription { get; set; }
-        public string ProductName { get; set; }
-
         
+        private string _ProductName;
+
+        public string ProductName
+        {
+            get {
+                
+                return StringHandler.InsertSpaces(_ProductName);
+            }
+            set { _ProductName = value; }
+        }
+
+
+
 
         //Validates the product data.
         public override bool Validate()
