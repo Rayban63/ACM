@@ -19,9 +19,15 @@ namespace Acme.Common
                     {
                         result = result.Trim();//Remove any allready existing spaces
                         result += " ";
+                        //result += System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(letter.ToLower());
 
                     }
                     result += letter;
+
+                   /* if (char.IsUpper(letter))
+                    {
+                        
+                    }*/
 
                 }
                 result = result.Trim();
